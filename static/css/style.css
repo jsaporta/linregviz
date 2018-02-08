@@ -1,0 +1,9 @@
+circle {
+    fill: blue;
+}
+
+.regline {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+}
