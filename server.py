@@ -4,8 +4,10 @@ import json
 import flask
 import flask_sqlalchemy
 import sklearn.linear_model
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+CORS(app)
 app.config.from_pyfile('config.py')
 db = flask_sqlalchemy.SQLAlchemy(app)
 
