@@ -74,8 +74,8 @@ function render_plot(dataset, estimates) {
 };
 
 
-d3.json('http://localhost:5000/data', function (dataset) {
-  d3.json('http://localhost:5000/model', function (estimates) {
+d3.json('/data', function (dataset) {
+  d3.json('/model', function (estimates) {
     render_plot(dataset, estimates);
   });
 });
@@ -88,10 +88,10 @@ svg.on("click", function () {
     y: yScale.invert(coords[1] - margin.bottom)
   }
 
-  d3.request('http://localhost:5000/data')
+  d3.request('/data')
     .header('Content-Type', 'application/json')
     .post(JSON.stringify(newData), function (d) {
-      d3.json('http://localhost:5000/model', function (estimates) {
+      d3.json('/model', function (estimates) {
         render_plot(JSON.parse(d.response), estimates);
       });
     });
@@ -99,9 +99,9 @@ svg.on("click", function () {
 
 document.getElementById("button")
   .onclick = function (event) {
-    d3.request('http://localhost:5000/data')
+    d3.request('/data')
       .send('DELETE', function (d) {
-        d3.json('http://localhost:5000/model', callback = function (estimates) {
+        d3.json('/model', callback = function (estimates) {
           d3.selectAll('circle').remove();
           d3.selectAll('.regline').remove();
           render_plot(JSON.parse(d.response), estimates);
