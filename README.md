@@ -12,11 +12,13 @@ This is a very simple interactive visualization of linear regression. I made it 
 7. If you really want to clean up, delete the `lrv` environment from your system using `conda remove --name lrv --all`.
 
 ## Structure of the code
-In the root folder, `server.py` serves up `templates/index.html` and manages the connection to a SQLite database, which is found in `data/points.db`. The main code for the visualization is found in `static/js/script.js`, which works primarily with the SVG element and specifies the behavior of the button. `static/css/style.css` provides styles that are not data-dependent. `config.py` simply lists some configuration options which are
+In the root folder, `server.py` sends `templates/index.html` to the browser and manages the connection to a SQLite database, which is found in `data/points.db`. The main code for the visualization is found in `static/js/script.js`, which works primarily with the SVG element and specifies the behavior of the button. `static/css/style.css` provides styles that are not data-dependent. `config.py` simply lists some configuration options which are
 imported into `server.py`.
 
+![](Diagram.svg)
+
 ## Guide for the confused
-### What is D3?
+### Web Pages and D3.
 Web pages fundamentally are made from files written in three distinct computer languages:
 - HyperText Markup Language (HTML) files lay out the **structure** of a page
 - Cascading Style Sheets (CSS) files specify how HTML components should be **presented**
