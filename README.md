@@ -4,11 +4,11 @@ This is a very simple interactive visualization of linear regression. I made it 
 
 ## How to use
 1. Clone this repo and navigate to its root folder.
-2. If you're using Anaconda/Miniconda, set up the environment with `conda env create -f environment.yml`, then use `source activate lrv` to activate it.<br />If you don't have `conda`, just make sure you have the packages listed in `environment.yml`.
+2. If you're using Anaconda/Miniconda, set up the environment with `conda env create -f environment.yml`, then use `conda activate lrv` to activate it.<br />If you don't have `conda`, just make sure you have the packages listed in `environment.yml` in your environment.
 3. Run `python server.py`.
 4. Go to your web browser and navigate to [localhost:5000](http://localhost:5000).
 5. The visualization is pretty self-explanatory. Have fun!
-6. To clean up, run `source deactivate` to stop using the environment. Shut down the server process as well.
+6. To clean up, first shut down the server process with CTRL+C, then run `conda deactivate` to stop using the environment.
 7. If you really want to clean up, delete the `lrv` environment from your system using `conda remove --name lrv --all`.
 
 ## Structure of the code
