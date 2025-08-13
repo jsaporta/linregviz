@@ -1,8 +1,0 @@
-name: lrv
-channels:
-  - conda-forge
-dependencies:
-  - python=3.9.5
-  - flask=2.0.1
-  - flask-sqlalchemy=2.5
-  - scikit-learn=0.24.2
